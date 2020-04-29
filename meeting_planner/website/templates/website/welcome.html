@@ -15,8 +15,15 @@
         This is the demo application for the course <em>Django: Getting Started</em>
         on <a href = "http://www.plurasight.com">Plurasight</a>
     </p>
-    <p>
-        There are currently {{num_meetings}} meetings in the database.
-    </p>
+    <h2>Meetings</h2>
+    <ul>
+        {%for meeting in meetings %}
+            <li>
+            <!--    <a href="/meetings/{{meeting.id}}">{{meeting.title}}</a> -->
+            <a href="{%url 'detail' meeting.id %}">{{meeting.title}}</a>
+            </li>
+        {%endfor %}
+    </ul>
+<p><a href="{% url 'roomlist'%}">List of Rooms</a> </p>
 </body>
 </html>
