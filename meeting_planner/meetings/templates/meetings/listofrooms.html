@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Rooms</title>
+</head>
+<body>
+<ul>
+    {%for room in rooms%}
+    <li>
+        {{room}}
+
+    </li>
+    {%endfor%}
+</ul>
+
+<p><a href="{% url 'home'%}">Home</a> </p>
+</body>
+</html>
